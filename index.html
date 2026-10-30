@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,9 +8,10 @@
 <meta property="og:title" content="Engr. Mansur Ahmed — IEB Election 2027–2028">
 <meta property="og:description" content="Candidate for Secretary, Mechanical Engineering Division (Ballot No. 05).">
 <meta property="og:image" content="mansur-ahmed.jpg">
+<script>(function(){var l=null;try{var q=new URLSearchParams(location.search).get('lang');if(q==='en'||q==='bn')l=q;else l=localStorage.getItem('lang');}catch(e){}document.documentElement.lang=(l==='en')?'en':'bn';})()</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --green:#0b5d3b; --green-deep:#073d27; --red:#d6202c; --gold:#f5c518;
@@ -108,63 +109,110 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .poster{max-width:320px}
   section.block{padding:56px 0}
 }
+
+/* Bilingual */
+em.en,em.bn{font-style:normal;font-size:inherit;font-weight:inherit;display:inline;padding:0;background:none;letter-spacing:inherit}
+html[lang="bn"] .en, html[lang="en"] .bn{display:none !important}
+html[lang="bn"] body{font-family:"Hind Siliguri",Inter,system-ui,sans-serif;line-height:1.75}
+html[lang="bn"] h1,html[lang="bn"] h2,html[lang="bn"] h3,html[lang="bn"] .brand{font-family:"Noto Serif Bengali","Hind Siliguri",serif}
+.lang{display:inline-flex;border:1px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden;flex:none}
+.lang button{background:none;border:0;color:#e3efe8;font:500 13px Inter,sans-serif;padding:5px 11px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#d6202c;color:#fff}
+.lang button:focus-visible{outline:2px solid #fff;outline-offset:-2px}
+
+nav .right{display:flex;align-items:center;gap:18px}
+html[lang="bn"] h1{line-height:1.2}
+html[lang="bn"] .tagline{font-family:"Noto Serif Bengali",serif;font-style:normal}
+html[lang="bn"] .eyebrow,html[lang="bn"] .kicker,html[lang="bn"] h1 small{letter-spacing:.02em}
+
+/* Election pop-up */
+.vpop{position:fixed;inset:0;z-index:60;display:flex;align-items:flex-start;justify-content:center;padding:18px 12px;background:rgba(4,30,19,.8);overflow-y:auto}
+.vpop[hidden]{display:none}
+.vp-wrap{position:relative;width:min(600px,100%);margin:auto}
+.vp-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.vp-top{display:flex;gap:18px;align-items:center;background:linear-gradient(135deg,var(--green-deep),var(--green));color:#fff;padding:20px;position:relative;overflow:hidden}
+.vp-top::before{content:"";position:absolute;left:-60px;top:-60px;width:160px;height:160px;border-radius:50%;background:var(--red);opacity:.9}
+.vp-photo{position:relative;width:96px;height:124px;object-fit:cover;object-position:top;border-radius:6px;border:3px solid #fff;flex:none}
+.vp-head{position:relative;flex:1;min-width:0}
+.vp-eyebrow{display:inline-block;background:var(--gold);color:var(--green-deep);font-weight:700;font-size:11px;letter-spacing:.06em;padding:3px 8px;border-radius:3px}
+.vp-name{font-family:Fraunces,serif;font-weight:800;font-size:24px;line-height:1.15;margin:8px 0 4px;color:#fff}
+html[lang="bn"] .vp-name{font-family:"Noto Serif Bengali",serif}
+.vp-post{font-size:14px;color:#d7ecdf;line-height:1.4}
+.vp-post b{color:#fff}
+.vp-ballot{position:relative;flex:none;background:var(--gold);color:var(--red);text-align:center;border-radius:6px;padding:6px 12px;transform:rotate(-3deg);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.vp-ballot span{display:block;font-size:10px;font-weight:700;color:var(--green-deep);letter-spacing:.06em}
+.vp-ballot b{font-family:Fraunces,serif;font-size:30px;line-height:1.1}
+.vp-body{padding:22px 22px 6px;text-align:center}
+.vp-date{font-weight:600;color:var(--green);font-size:15px}
+.vp-appeal{font-family:"Noto Serif Bengali","Hind Siliguri",serif;font-size:19px;font-weight:600;color:var(--ink);line-height:1.6;margin-top:8px}
+.vp-tag{font-family:Fraunces,serif;font-style:italic;color:var(--red);margin-top:8px}
+html[lang="bn"] .vp-tag{font-family:"Noto Serif Bengali",serif;font-style:normal}
+.vp-bar{display:flex;justify-content:center;padding:16px 22px 20px}
+.vp-ok{background:var(--green);color:#fff;border:0;border-radius:5px;padding:11px 26px;font:600 15px Inter,sans-serif;cursor:pointer}
+html[lang="bn"] .vp-ok{font-family:"Hind Siliguri",sans-serif}
+.vp-x{position:absolute;top:-12px;right:-12px;width:36px;height:36px;border-radius:50%;background:#fff;border:0;font-size:24px;line-height:1;color:var(--green-deep);cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:2}
+.vp-ok:focus-visible,.vp-x:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (max-width:560px){.vpop{align-items:center}.vp-x{top:-14px;right:-4px;width:32px;height:32px}.vp-top{padding:16px;gap:12px}.vp-photo{width:70px;height:92px}.vp-name{font-size:19px}.vp-post{font-size:12.5px}.vp-ballot b{font-size:24px}.vp-appeal{font-size:17px}}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="wrap">
-    <a class="brand" href="#top">Engr. Mansur Ahmed</a>
+    <a class="brand" href="#top"><span class="en">Engr. Mansur Ahmed</span><span class="bn" lang="bn">প্রকৌশলী মনছুর আহম্মেদ</span></a>
+    <div class="right">
     <ul>
-      <li><a href="#candidacy">Candidacy</a></li>
-      <li class="hide-sm"><a href="#profile">Profile</a></li>
-      <li><a href="#vote">Vote</a></li>
+      <li class="hide-sm"><a href="#candidacy"><span class="en">Candidacy</span><span class="bn" lang="bn">প্রার্থিতা</span></a></li>
+      <li class="hide-sm"><a href="#profile"><span class="en">Profile</span><span class="bn" lang="bn">প্রোফাইল</span></a></li>
+      <li><a href="#vote"><span class="en">Vote</span><span class="bn" lang="bn">ভোট</span></a></li>
     </ul>
+    <div class="lang" role="group" aria-label="Language / ভাষা"><button type="button" data-lang="bn" aria-pressed="true">বাংলা</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+    </div>
   </div>
 </nav>
 
 <header class="hero" id="top">
   <div class="wrap">
     <div>
-      <span class="eyebrow">IEB Election 2027–2028</span>
-      <h1><small>Engineer</small>Mansur Ahmed</h1>
-      <p class="role">Candidate for <strong>Secretary, Mechanical Engineering Division</strong> — Institution of Engineers, Bangladesh</p>
-      <p class="tagline">“Together for a Stronger IEB”</p>
+      <span class="eyebrow"><span class="en">IEB Election 2027–2028</span><span class="bn" lang="bn">আইইবি নির্বাচন ২০২৭–২০২৮</span></span>
+      <h1><small><span class="en">Engineer</span><span class="bn" lang="bn">প্রকৌশলী</span></small><span class="en">Mansur Ahmed</span><span class="bn" lang="bn">মনছুর আহম্মেদ</span></h1>
+      <p class="role"><span class="en">Candidate for <strong>Secretary, Mechanical Engineering Division</strong> — Institution of Engineers, Bangladesh</span><span class="bn" lang="bn"><strong>সেক্রেটারি, মেকানিক্যাল ইঞ্জিনিয়ারিং ডিভিশন</strong> পদে প্রার্থী — ইনস্টিটিউশন অব ইঞ্জিনিয়ার্স, বাংলাদেশ</span></p>
+      <p class="tagline"><span class="en">“Together for a Stronger IEB”</span><span class="bn" lang="bn">“শক্তিশালী আইইবি-র জন্য একসাথে”</span></p>
       <div class="cta">
-        <a class="btn btn-primary" href="#candidacy">Ballot No. 05</a>
-        <a class="btn btn-ghost" href="#profile">View profile</a>
+        <a class="btn btn-primary" href="#candidacy"><span class="en">Ballot No. 05</span><span class="bn" lang="bn">ব্যালট নং ০৫</span></a>
+        <a class="btn btn-ghost" href="#profile"><span class="en">View profile</span><span class="bn" lang="bn">প্রোফাইল দেখুন</span></a>
       </div>
     </div>
     <div class="portrait">
       <img src="mansur-ahmed.jpg" alt="Portrait of Engr. Mansur Ahmed" width="440" height="600">
-      <div class="ballot"><span>Ballot No</span><b>#05</b></div>
+      <div class="ballot"><span><span class="en">Ballot No</span><span class="bn" lang="bn">ব্যালট নং</span></span><b><em class="en">#05</em><em class="bn" lang="bn">#০৫</em></b></div>
     </div>
   </div>
 </header>
 
 <section class="block" id="candidacy">
   <div class="wrap">
-    <p class="kicker">Candidacy</p>
-    <h2>Standing for the 2027–2028 term</h2>
-    <p class="lead">Engr. Mansur Ahmed is contesting the election of the Institution of Engineers, Bangladesh (IEB).</p>
+    <p class="kicker"><span class="en">Candidacy</span><span class="bn" lang="bn">প্রার্থিতা</span></p>
+    <h2><span class="en">Standing for the 2027–2028 term</span><span class="bn" lang="bn">২০২৭–২০২৮ মেয়াদের জন্য প্রার্থী</span></h2>
+    <p class="lead"><span class="en">Engr. Mansur Ahmed is contesting the election of the Institution of Engineers, Bangladesh (IEB).</span><span class="bn" lang="bn">প্রকৌশলী মনছুর আহম্মেদ ইনস্টিটিউশন অব ইঞ্জিনিয়ার্স, বাংলাদেশ (আইইবি)-এর নির্বাচনে প্রতিদ্বন্দ্বিতা করছেন।</span></p>
 
     <div class="cards">
       <div class="card primary">
-        <h3>Secretary</h3>
-        <p class="sub">Mechanical Engineering Division</p>
-        <div class="num"><span>Ballot No.</span><b>05</b></div>
+        <h3><span class="en">Secretary</span><span class="bn" lang="bn">সেক্রেটারি</span></h3>
+        <p class="sub"><span class="en">Mechanical Engineering Division</span><span class="bn" lang="bn">মেকানিক্যাল ইঞ্জিনিয়ারিং ডিভিশন</span></p>
+        <div class="num"><span><span class="en">Ballot No.</span><span class="bn" lang="bn">ব্যালট নং</span></span><b><em class="en">05</em><em class="bn" lang="bn">০৫</em></b></div>
       </div>
       <div class="card">
-        <h3>Central Council Member</h3>
-        <p class="sub">Institution of Engineers, Bangladesh</p>
-        <div class="num"><span>Serial No.</span><b>125</b></div>
+        <h3><span class="en">Central Council Member</span><span class="bn" lang="bn">কেন্দ্রীয় কাউন্সিল সদস্য</span></h3>
+        <p class="sub"><span class="en">Institution of Engineers, Bangladesh</span><span class="bn" lang="bn">ইনস্টিটিউশন অব ইঞ্জিনিয়ার্স, বাংলাদেশ</span></p>
+        <div class="num"><span><span class="en">Serial No.</span><span class="bn" lang="bn">ক্রমিক নং</span></span><b><em class="en">125</em><em class="bn" lang="bn">১২৫</em></b></div>
       </div>
     </div>
 
     <div class="facts">
-      <div class="fact"><span>Election</span><b>IEB Election 2027–2028</b></div>
-      <div class="fact"><span>Polling day</span><b>12 November 2026</b></div>
-      <div class="fact"><span>IEB Membership</span><b>F/14286</b></div>
+      <div class="fact"><span><span class="en">Election</span><span class="bn" lang="bn">নির্বাচন</span></span><b><span class="en">IEB Election 2027–2028</span><span class="bn" lang="bn">আইইবি নির্বাচন ২০২৭–২০২৮</span></b></div>
+      <div class="fact"><span><span class="en">Polling day</span><span class="bn" lang="bn">ভোটের দিন</span></span><b><span class="en">12 November 2026</span><span class="bn" lang="bn">১২ নভেম্বর ২০২৬</span></b></div>
+      <div class="fact"><span><span class="en">IEB Membership</span><span class="bn" lang="bn">আইইবি সদস্য নং</span></span><b>F/14286</b></div>
     </div>
   </div>
 </section>
@@ -175,14 +223,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <img src="ieb-poster.jpg" alt="Election poster of Engr. Mansur Ahmed, Secretary candidate, Mechanical Engineering Division, Ballot No. 05" width="512" height="768" id="posterImg">
     </div>
     <div>
-      <p class="kicker">Profile</p>
-      <h2>Engr. Mansur Ahmed</h2>
-      <p class="lead">Mechanical engineer and member of the Institution of Engineers, Bangladesh.</p>
+      <p class="kicker"><span class="en">Profile</span><span class="bn" lang="bn">প্রোফাইল</span></p>
+      <h2><span class="en">Engr. Mansur Ahmed</span><span class="bn" lang="bn">প্রকৌশলী মনছুর আহম্মেদ</span></h2>
+      <p class="lead"><span class="en">Mechanical engineer and member of the Institution of Engineers, Bangladesh.</span><span class="bn" lang="bn">মেকানিক্যাল ইঞ্জিনিয়ার এবং ইনস্টিটিউশন অব ইঞ্জিনিয়ার্স, বাংলাদেশ-এর সদস্য।</span></p>
       <dl class="profile">
-        <dt>Name</dt><dd>Engr. Mansur Ahmed</dd>
-        <dt>Discipline</dt><dd>Mechanical Engineering</dd>
-        <dt>IEB No.</dt><dd>F/14286</dd>
-        <dt>Contesting</dt><dd>Secretary, Mechanical Engineering Division (Ballot No. 05)<br>Central Council Member (Serial No. 125)</dd>
+        <dt><span class="en">Name</span><span class="bn" lang="bn">নাম</span></dt><dd><span class="en">Engr. Mansur Ahmed</span><span class="bn" lang="bn">প্রকৌশলী মনছুর আহম্মেদ</span></dd>
+        <dt><span class="en">Discipline</span><span class="bn" lang="bn">বিভাগ</span></dt><dd><span class="en">Mechanical Engineering</span><span class="bn" lang="bn">মেকানিক্যাল ইঞ্জিনিয়ারিং</span></dd>
+        <dt><span class="en">IEB No.</span><span class="bn" lang="bn">আইইবি নং</span></dt><dd>F/14286</dd>
+        <dt><span class="en">Contesting</span><span class="bn" lang="bn">প্রার্থী পদ</span></dt><dd><span class="en">Secretary, Mechanical Engineering Division (Ballot No. 05)<br>Central Council Member (Serial No. 125)</span><span class="bn" lang="bn">সেক্রেটারি, মেকানিক্যাল ইঞ্জিনিয়ারিং ডিভিশন (ব্যালট নং ০৫)<br>কেন্দ্রীয় কাউন্সিল সদস্য (ক্রমিক নং ১২৫)</span></dd>
       </dl>
     </div>
   </div>
@@ -190,16 +238,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <section class="block appeal" id="vote">
   <div class="wrap">
-    <h2>Your vote, your IEB</h2>
-    <p>On 12 November 2026, please support Engr. Mansur Ahmed for Secretary of the Mechanical Engineering Division.</p>
-    <p class="big">Ballot No. 05 · Serial No. 125</p>
+    <h2><span class="en">Your vote, your IEB</span><span class="bn" lang="bn">আপনার ভোট, আপনার আইইবি</span></h2>
+    <p><span class="en">On 12 November 2026, please support Engr. Mansur Ahmed for Secretary of the Mechanical Engineering Division.</span><span class="bn" lang="bn">১২ নভেম্বর ২০২৬ মেকানিক্যাল ইঞ্জিনিয়ারিং ডিভিশনের সেক্রেটারি পদে প্রকৌশলী মনছুর আহম্মেদকে সমর্থন দিন।</span></p>
+    <p class="big"><span class="en">Ballot No. 05 · Serial No. 125</span><span class="bn" lang="bn">ব্যালট নং ০৫ · ক্রমিক নং ১২৫</span></p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <span>© 2026 Engr. Mansur Ahmed</span>
-    <span>Site by <a href="https://futuremind.ltd">FutureMind</a></span>
+    <span><span class="en">Site by</span><span class="bn" lang="bn">সাইট:</span> <a href="https://futuremind.ltd">FutureMind</a></span>
   </div>
 </footer>
 
@@ -214,6 +262,50 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   document.getElementById('lbClose').addEventListener('click',function(){lb.classList.remove('open')});
   lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('open')});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')});
+})();
+</script>
+
+<div class="vpop" id="vpop" role="dialog" aria-modal="true" aria-labelledby="vp-title" hidden>
+  <div class="vp-wrap">
+    <button class="vp-x" type="button" aria-label="Close" data-close>&times;</button>
+    <article class="vp-card">
+      <div class="vp-top">
+        <img class="vp-photo" src="mansur-ahmed.jpg" width="440" height="600" alt="Portrait of Engr. Mansur Ahmed">
+        <div class="vp-head">
+          <span class="vp-eyebrow"><span class="en">IEB ELECTION 2027–2028</span><span class="bn" lang="bn">আইইবি নির্বাচন ২০২৭–২০২৮</span></span>
+          <h2 class="vp-name" id="vp-title"><span class="en">Engr. Mansur Ahmed</span><span class="bn" lang="bn">প্রকৌশলী মনছুর আহম্মেদ</span></h2>
+          <p class="vp-post"><span class="en">Candidate for <b>Secretary</b><br>Mechanical Engineering Division</span><span class="bn" lang="bn"><b>সেক্রেটারি</b> পদে প্রার্থী<br>মেকানিক্যাল ইঞ্জিনিয়ারিং ডিভিশন</span></p>
+        </div>
+        <div class="vp-ballot"><span><span class="en">BALLOT NO.</span><span class="bn" lang="bn">ব্যালট নং</span></span><b><em class="en">05</em><em class="bn" lang="bn">০৫</em></b></div>
+      </div>
+      <div class="vp-body">
+        <p class="vp-date"><span class="en">Polling day: 12 November 2026</span><span class="bn" lang="bn">ভোটের দিন: ১২ নভেম্বর ২০২৬</span></p>
+        <p class="vp-appeal" lang="bn">প্রকৌশলী মনছুর আহম্মেদকে ব্যালট নং ০৫-এ ভোট দিয়ে জয়যুক্ত করুন।</p>
+        <p class="vp-tag"><span class="en">“Together for a Stronger IEB”</span><span class="bn" lang="bn">“শক্তিশালী আইইবি-র জন্য একসাথে”</span></p>
+      </div>
+      <div class="vp-bar"><button class="vp-ok" type="button" data-close><span class="en">View profile</span><span class="bn" lang="bn">প্রোফাইল দেখুন</span></button></div>
+    </article>
+  </div>
+</div>
+<script>
+(function(){
+  var box=document.getElementById('vpop'); if(!box) return;
+  var seen=false; try{ seen=sessionStorage.getItem('voteSeen')==='1'; }catch(e){}
+  if(seen) return;
+  var last=null;
+  function close(){ box.hidden=true; document.body.style.overflow=''; try{ sessionStorage.setItem('voteSeen','1'); }catch(e){} if(last&&last.focus) last.focus(); document.removeEventListener('keydown',onKey); }
+  function onKey(e){ if(e.key==='Escape') close(); }
+  box.addEventListener('click',function(e){ if(e.target===box||e.target.closest('[data-close]')) close(); });
+  last=document.activeElement; box.hidden=false; document.body.style.overflow='hidden'; document.addEventListener('keydown',onKey);
+  var ok=box.querySelector('.vp-ok'); if(ok) ok.focus({preventScroll:true}); box.scrollTop=0;
+})();
+</script>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.lang button');
+  function set(l){ document.documentElement.lang=l; btns.forEach(function(x){x.setAttribute('aria-pressed',x.getAttribute('data-lang')===l)}); try{localStorage.setItem('lang',l)}catch(e){} }
+  btns.forEach(function(x){x.addEventListener('click',function(){set(x.getAttribute('data-lang'))})});
+  set(document.documentElement.lang==='en'?'en':'bn');
 })();
 </script>
 </body>
